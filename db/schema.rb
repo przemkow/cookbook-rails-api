@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160214192631) do
+ActiveRecord::Schema.define(version: 20160214221311) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "favourites_followers", id: false, force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "recipe_id"
+  end
+
+  add_index "favourites_followers", ["recipe_id"], name: "index_favourites_followers_on_recipe_id", using: :btree
+  add_index "favourites_followers", ["user_id"], name: "index_favourites_followers_on_user_id", using: :btree
 
   create_table "recipes", force: :cascade do |t|
     t.string   "name"
