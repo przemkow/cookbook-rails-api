@@ -10,7 +10,9 @@
 | [Ruby on Rails](http://www.rubyonrails.org/) | 4.2.4 |
 | [PostgreSQL](http://www.postgresql.org/) | 9.5.1 |
 
+#### Other tools:
 
+  [Devise](https://github.com/plataformatec/devise/tree/v4.0.0.rc1) v4.0.0.rc1
 ## Setup
 
 Follow these steps to setup the application:
