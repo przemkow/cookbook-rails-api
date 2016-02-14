@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+<p>Name:</p>
+<%= @recipe.name %>
+<p>User_id:</p>
+<%= @recipe.user_id %>
+<p>Description:</p>
+<%= @recipe.description %>
+<p>Preparation time in sec:</p>
+<%= @recipe.preparation_time_in_sec %>
+<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+<%= link_to 'Back', recipes_path %>
