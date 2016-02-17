@@ -4,5 +4,5 @@ class Recipe < ActiveRecord::Base
 
   validates :name, presence: true
   validates :description, presence: true
-  validates :preparation_time_in_sec, presence: true
+  validates :preparation_time_in_min, presence: true
 end
