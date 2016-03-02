@@ -17,7 +17,7 @@
       <tr>
         <td><%= recipe.name %></td>
         <td><%= recipe.user_id %></td>
-        <td><%= recipe.preparation_time_in_sec %></td>
+        <td><%= recipe.preparation_time_in_min %></td>
         <td><%= link_to 'Show', recipe %></td>
         <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
         <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
