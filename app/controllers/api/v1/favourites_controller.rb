@@ -14,7 +14,7 @@ class Api::V1::FavouritesController < ApplicationController
     elsif current_user.favourites.include?(recipe)
       render json: { errors: "User already has this recipe in favourites"}, status: 406
     else
-      current_user.favourites << recipe
+      current_user.favourites.push(recipe)
       render json: current_user.favourites, status: 201, location: [:api, current_user]
     end
   end
