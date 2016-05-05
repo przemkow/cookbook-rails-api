@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     scope module: :v1, constraints: ApiConstraints.new(version: 1, default: true)  do
       resources :users, only: [:show, :create, :update, :destroy] do
         resources :favourites, only: [:index, :create, :destroy], param: :recipe_id
+        resources :recipes, only: [:index], controller: 'user_recipes'
+
       end
       resources :sessions, only: [:create, :destroy]
       resources :recipes, only: [:index, :show, :create, :update, :destroy]
